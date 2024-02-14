@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #'jazzmin', #varsayılan görüntüyü daha kullanışlı hale getirir.
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
