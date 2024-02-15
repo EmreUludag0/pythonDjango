@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ sayfaBaslik }}</title>
-</head>
-<body>
-    <h2>...Anasayfa...</h2>
+
+{% extends "core/base.html" %}
+
+{% block alanlar %}
+
     <p>{{icerik}}</p>
     
     {% if icerik != "emre" %}
@@ -16,7 +12,5 @@
     <hr>{% for harf in sayfaBaslik %}
         {{ harf }} <br>
     {% endfor %}
-    
 
-</body>
-</html>
+{% endblock alanlar %}
