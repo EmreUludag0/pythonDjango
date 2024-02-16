@@ -121,6 +121,13 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+## Yapılıs nedeni, kök static dosyalarına nereden erişim sağlasın kısmını yaparız.
+## Cagirilmak istenen sayfaya > load static ile cagrılır.
+## {% load static %} burada tanımlanır.
+STATICFILES_DIRS = [
+    BASE_DIR / 'static_files'
+]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 

@@ -16,10 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from blogger.views import anasayfa
+from blogger.views import *
 
 urlpatterns = [
-    path('',anasayfa, name= "anasayfa"),
+    #views kısmında yazdigim fonksiyonları burada cagirmaya yarar.
+    path('', Anasayfa, name= "anasayfa"),
+    path('blog/', Blog, name="blog"),
+    path('hakkimizda/', Hakkimizda, name="hakkimizda"),
+    path('iletisim/', Iletisim, name="iletisim"),
 
     path('admin/', admin.site.urls),
 ]
