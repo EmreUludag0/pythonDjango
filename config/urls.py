@@ -21,7 +21,7 @@ from blogger.views import *
 urlpatterns = [
     #views kısmında yazdigim fonksiyonları burada cagirmaya yarar.
     path('', Anasayfa, name= "anasayfa"),
-    path('blog/', Blog, name="blog"),
+    path('blog/', blog, name="blog"),
     path('hakkimizda/', Hakkimizda, name="hakkimizda"),
     path('iletisim/', Iletisim, name="iletisim"),
 

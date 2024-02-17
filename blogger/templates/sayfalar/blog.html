@@ -1,0 +1,17 @@
+{% extends "core/base.html" %}
+
+{% load static %} {# static files kullanmak için load yapmak gerekiyor #}
+
+{% block alanlar %}
+
+{{ icerik }}
+
+<br>
+
+<img src="{% static 'img / img (1).jpg' %}" alt = ""> {# foto çıkmıyo, tekrar bak. #}
+
+
+{% endblock alanlar %}
+
+{{ icerik }}
+

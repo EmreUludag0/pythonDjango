@@ -12,17 +12,19 @@ def Anasayfa(request):
         icerik = icerik
     )
 
-    return render(request,"sayfalar\index.html", bilgiler)
+    return render(request,"sayfalar/index.html", bilgiler)
 
-def Blog(request):
+def blog(request):
+    liste = [1,2]
     sayfaBaslik = "Blog".upper()
     icerik = "Icerik Sayfasina hosgeldiniz"
     bilgiler = dict(
+        liste = liste,
         sayfaBaslik = sayfaBaslik,
         icerik = icerik
     )
 
-    return render(request, "sayfalar\blog.html", bilgiler)
+    return render(request, "sayfalar/blog.html", bilgiler)
 
 def Hakkimizda(request):
     sayfaBaslik = "Hakkimizda".upper()
@@ -32,7 +34,7 @@ def Hakkimizda(request):
         icerik = icerik
     )
 
-    return render(request, "sayfalar\hakkimizda.html", bilgiler)
+    return render(request, "sayfalar/hakkimizda.html", bilgiler)
 
 def Iletisim(request):
     sayfaBaslik = "Iletisim".upper()
@@ -42,5 +44,5 @@ def Iletisim(request):
         icerik = icerik
     )
 
-    return render(request, "sayfalar\iletisim.html", bilgiler)
+    return render(request, "sayfalar/iletisim.html", bilgiler)
 
