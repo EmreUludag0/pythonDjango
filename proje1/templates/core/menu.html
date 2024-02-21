@@ -1,8 +1,8 @@
+{% load static %}
 
-
-<div id="topPan"><a href="#"><img src="images/logo.gif" title="Green Solutions" alt="Green Solutions" width="204" height="57" border="0"/></a>
+<div id="topPan"><a href="#"><img src="{% static 'images/logo.gif' %}" title="Green Solutions" alt="Green Solutions" width="204" height="57" border="0"/></a>
     <ul>
-      <li><span>Home</span></li>
+      <li><a href=" {% url 'anasayfa' %} ">Home</a></li>
       <li><a href="#">About us</a></li>
       <li><a href="#">Services</a></li>
       <li><a href="#">Client</a></li>

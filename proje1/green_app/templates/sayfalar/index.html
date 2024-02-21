@@ -1,4 +1,5 @@
-
+{% extends "core/base.html" %}
+{% block icerik %}
 
 
 <h2>Anasayfa {{ zaman }}</h2>
@@ -7,10 +8,8 @@
 
 <div id="rightPan">
     <div id="rightbodyPan">
-      <h2>About Us</h2>
-      <p class="redtext">This is a free, tableless, W3C-compliant web design layout by Template World.</p>
-      <p>Green Solutions is a free, tableless, W3C-compliant web design layout by Template World. This template has been tested and proven compatible with all major browser environments and operating systems. You are free to modify the design to suit your tastes in any way you like.</p>
-      <p>We only ask you to not remove <span>"Design by Template World"</span> and the link http://www.templateworld.com from the footer of the template.</p>
+      <h2>{{ baslik }} - {{ zaman }} </h2>
+      <p class="redtext">{{ icerik }}</p>
       <div id="rightbodymore">
         <p class="textposition">sbut also the leap into electronic</p>
         <a href="#">more</a></div>
@@ -28,3 +27,5 @@
     </div>
   </div>
 </div>
+
+{% endblock icerik %}
