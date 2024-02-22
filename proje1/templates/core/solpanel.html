@@ -32,21 +32,12 @@
           </div>
         </form>
       </div>
-      <h3>More tips</h3>
+      <h3>Sosyal Medya</h3>
       <ul>
-        <li><a href="#">Lorem Ipsum has</a></li>
-        <li><a href="#">been the industry's</a></li>
-        <li><a href="#">standard dum</a></li>
-        <li><a href="#">text ever since the</a></li>
-        <li><a href="#">1500s, when an</a></li>
-        <li><a href="#">unknown printer</a></li>
-        <li><a href="#">galley of type</a></li>
-        <li><a href="#">and scrambled</a></li>
-        <li><a href="#">make a typ</a></li>
-        <li><a href="#">especimen</a></li>
-        <li><a href="#">has survived</a></li>
-        <li><a href="#">been the dummy</a></li>
-        <li><a href="#">text ever</a></li>
-        <li><a href="#">since1500s,an</a></li>
+        {% for hesap in hesaplar  %}  
+          
+          <li><a href = "#"> {{ hesap }} </a></li>
+          
+        {% endfor %}
       </ul>
     </div>

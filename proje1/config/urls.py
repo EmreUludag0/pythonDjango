@@ -20,5 +20,6 @@ from green_app.views import  *
 
 urlpatterns = [
     path('', anasayfa, name = "anasayfa"),
+    path('hakkimizda/', hakkimizda, name = "hakkimizda"),
     path('admin/', admin.site.urls),
 ]
