@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from datetime import datetime
+from .models import *
 
 sosyalMedyaHesaplari = [
     "Instagram", "linkedin", "github"
 ]
 
 anasayfa_depo = {
+    "duyurular" : Duyurular.objects.all(), # admin paneline girilen duyurulari dondurmeye yarar.
     "konu" : "hakkimizda Sayfasi",
     "alt_konu" : "doga korunmasi",
     "konular" : [
