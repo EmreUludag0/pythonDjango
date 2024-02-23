@@ -18,8 +18,15 @@ from django.contrib import admin
 from django.urls import path
 from green_app.views import  *
 
+# media dosyalari için modul dahil ettik
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
     path('', anasayfa, name = "anasayfa"),
     path('hakkimizda/', hakkimizda, name = "hakkimizda"),
+    path('galeri/', galeri, name="galeri"),
+
     path('admin/', admin.site.urls),
+    
 ]
+#+ static(settings.MEDIA_URL, Document_root = settings.MEDIA_ROOT) # "+ static", gorsel dosyalarini eklemek icin kullanilan kod satiri.

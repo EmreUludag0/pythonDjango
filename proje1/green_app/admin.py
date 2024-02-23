@@ -6,4 +6,9 @@ from .models import * #models sayfasında kac tane tablo varsa getirir.
 class DuyuruAdmin(admin.ModelAdmin):
     list_display = ["DuyuruBaslik","DuyuruIcerik"]
 
-admin.site.register(Duyurular,DuyuruAdmin)  
+class GorselAdmin(admin.ModelAdmin):
+    list_display = ["gorselBaslik"]
+
+admin.site.register(Duyurular,DuyuruAdmin)
+admin.site.register(Gorseller,GorselAdmin)  
+

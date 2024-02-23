@@ -38,4 +38,12 @@ def anasayfa(request):
 
 def hakkimizda(request):
     return render(request, "sayfalar/hakkimizda.html", anasayfa_depo)
+
+def galeri(request):
+    baslik = "Galeri",
+    sozluk = dict(
+        hesaplar = sosyalMedyaHesaplari,
+        baslik = baslik
+    )
+    return render(request, "sayfalar/galeri.html", sozluk)
     
