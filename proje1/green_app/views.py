@@ -40,10 +40,12 @@ def hakkimizda(request):
     return render(request, "sayfalar/hakkimizda.html", anasayfa_depo)
 
 def galeri(request):
+    image = Gorseller.objects.all() 
     baslik = "Galeri",
     sozluk = dict(
         hesaplar = sosyalMedyaHesaplari,
-        baslik = baslik
+        baslik = baslik,
+        image = image
     )
     return render(request, "sayfalar/galeri.html", sozluk)
     

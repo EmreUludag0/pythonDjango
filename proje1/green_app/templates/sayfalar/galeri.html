@@ -8,7 +8,19 @@
 <div id="rightPan">
         <div id="rightbodyPan">
             <h2>{{ baslik }} Sayfasi</h2>
-            
+
+            <img src=" {{ fotolar.image.url }} "/>
+
+            <div class="container">
+                    {% for img in image %}
+                        <div class="col-md-3">
+                            <h4>{{ image.gorselBaslik }}</h4>
+                            <img src="{{ img.image.url }}" width="150",height="100"/>
+                        
+                        </div>
+                    {% endfor %}
+            </div>
+
         </div>
     </div>
 </div>
