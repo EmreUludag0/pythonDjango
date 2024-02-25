@@ -9,6 +9,8 @@ class DuyuruAdmin(admin.ModelAdmin):
 class GorselAdmin(admin.ModelAdmin):
     list_display = ["gorselBaslik"]
 
+
 admin.site.register(Duyurular,DuyuruAdmin)
 admin.site.register(Gorseller,GorselAdmin)  
+
 

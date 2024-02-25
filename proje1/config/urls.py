@@ -28,5 +28,4 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
     
-]
-#+ static(settings.MEDIA_URL, Document_root = settings.MEDIA_ROOT) # "+ static", gorsel dosyalarini eklemek icin kullanilan kod satiri.
+]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) # "+ static", gorsel dosyalarini eklemek icin kullanilan kod satiri.
