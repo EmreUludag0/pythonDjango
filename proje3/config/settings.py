@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'browny_app',
+    'user_profile',
 ]
 
 MIDDLEWARE = [

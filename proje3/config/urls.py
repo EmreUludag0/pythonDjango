@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from browny_app.views import *
 
 ## Media dosyalarını eklemek için kullandık
@@ -25,6 +25,8 @@ urlpatterns = [
     path('', anasayfa, name="anasayfa"),
     path('egitimler/', egitimler, name="egitimler"),
     
-    
+    # admin page
     path('admin/', admin.site.urls),
+    #user page
+    path('user/', include('user_profile.urls', namespace="user"), ),
 ] + static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
