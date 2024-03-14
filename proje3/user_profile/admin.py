@@ -4,7 +4,7 @@ from .models import *
 
 class UyelerAdmin(admin.ModelAdmin):
     list_display = [
-        "eposta", "adi", "soyadi"
+        "user"
     ]
 
 
