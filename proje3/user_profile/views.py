@@ -1,8 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-
-def loagin(request):
+def login(request):
     baslik = "Oturum Aç"
     sozluk = dict(
         baslik = baslik
@@ -13,9 +12,8 @@ def logout(request):
     pass
 
 def register(request):
-    baslik = "uyelik olustur"
+    baslik = "Üyelik Oluştur"
     sozluk = dict(
         baslik = baslik
     )
     return render(request, "user_profile/register.html", sozluk)
-

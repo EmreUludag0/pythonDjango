@@ -23,10 +23,12 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', anasayfa, name="anasayfa"),
-    path('egitimler/', egitimler, name="egitimler"),
+    path("haberler/", haberler, name="haberler"),
+    path('<int:haberID>', haberdetay, name="haberdetay"),
     
     # admin page
     path('admin/', admin.site.urls),
-    #user page
-    path('user/', include('user_profile.urls', namespace="user"), ),
+    
+    # user page
+    path('user/', include('user_profile.urls', namespace='user'),),
 ] + static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)

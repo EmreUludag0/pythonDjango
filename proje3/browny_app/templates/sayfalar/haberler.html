@@ -6,7 +6,7 @@
 {% block icerik %}
 
 <div class="container">
-  <h2>Anasayfa</h2>
+  <h2>HABERLER SAYFASI</h2>
   <div class="row">
 
     {% for haber in haberler %}
@@ -17,7 +17,7 @@
           <div class="card-body">
             <h5 class="card-title"> {{ haber.baslik }} </h5>
             <p class="card-text"> {{ haber.icerik }} </p>
-            <a href=" {{ haber.id }} " class="btn btn-primary">Detay Gör</a>
+            <a href=" haberler/" class="btn btn-primary">Detay Gör</a>
           </div>
         </div>
 

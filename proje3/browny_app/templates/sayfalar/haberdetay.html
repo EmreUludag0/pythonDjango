@@ -1,0 +1,29 @@
+
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block icerik %}
+
+<div class="container">
+  <h2> {{ baslik }} </h2>
+  <div class="row">
+
+    
+      <div class="col-md-3 m-3">
+
+        <div class="card" style="width: 18rem;">
+          <img src=" {{ haberler.gorsel.url }} " class="card-img-top" alt="1">
+          <div class="card-body">
+            <h5 class="card-title"> {{ haberler.baslik }} </h5>
+            <p class="card-text"> {{ haberler.icerik }} </p>
+            <a href=" {{ haberler.id }} " class="btn btn-primary">Detay Gör</a>
+          </div>
+        </div>
+
+      </div>
+    
+  </div>
+</div>
+
+{% endblock icerik %}

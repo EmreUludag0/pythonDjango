@@ -11,12 +11,21 @@ def anasayfa(request):
     )
     return render(request,"sayfalar/index.html", sozluk)
 
-def egitimler(request, egitimID):
-    ## pk değeri gelecek
-    egitimid = Haberler.objects.get(pk=egitimID)
-    baslik = "Eğitimler"
+def haberler(request):
+    haberler = Haberler.objects.all()
+    baslik = "Haberler"
     sozluk = dict(
         baslik = baslik,
-        egitimid = egitimid
+        haberler = haberler
     )
-    return render(request, "sayfalar/egitimler.html", sozluk)
+    return render(request, "sayfalar/haberler.html", sozluk)
+
+def haberdetay(request, haberID):
+    ## pk değeri gelecek
+    haberler = Haberler.objects.get(pk=haberID)
+    baslik = "Haber Detay"
+    sozluk = dict(
+        baslik = baslik,
+        haberler = haberler
+    )
+    return render(request, "sayfalar/haberdetay.html", sozluk)
