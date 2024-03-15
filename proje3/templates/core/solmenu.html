@@ -3,35 +3,32 @@
 
 <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
 
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" 
-        href="/">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
         <div class="sidebar-brand-icon">
             <img src="img/logo-icon.png" alt="">
         </div>
-        <div class="sidebar-brand-text mx-3">
-            <img src="{% static 'img/logo.png' %} " alt="">
-        </div>
+        <div class="sidebar-brand-text mx-3"><img src=" {% static 'img/logo.png' %} " alt=""></div>
     </a>
 
     <li class="nav-item active">
         <a class="nav-link" href="movies.html">
             <i class="fas fa-fw fa-film"></i>
-            <span>Mesleki ve Teknik</span></a>
+            <span>Movies</span></a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="events.html">
             <i class="fas fa-fw fa-glass-cheers"></i>
-            <span>Kişisel Gelişim</span></a>
+            <span>Events</span></a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="people.html">
             <i class="fas fa-fw fa-users"></i>
-            <span>Güzel Sanatlar</span></a>
+            <span>People</span></a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="sports.html">
             <i class="fas fa-fw fa-futbol"></i>
-            <span>El Sanatları ve Zanaat</span></a>
+            <span>Sports</span></a>
     </li>
 
     <hr class="sidebar-divider">
@@ -59,9 +56,9 @@
         </div>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="/admin">
+        <a class="nav-link" href="offers.html">
             <i class="fas fa-fw fa-fire"></i>
-            <span>Admin Page</span></a>
+            <span>Offers</span></a>
     </li>
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -71,9 +68,9 @@
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Login Screens:</h6>
-                <a class="collapse-item" href=" {% url 'user_profile:login' %} ">Login</a>
-                <a class="collapse-item" href=" {% url 'user_profile:register' %} ">Register</a>
+                <h6 class="collapse-header">Login Screen:</h6>
+                <a class="collapse-item" href=" {% url "user_profile:login" %} ">Login</a>
+                <a class="collapse-item" href=" {% url "user_profile:register" %}">Register</a>
                 <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
                 <div class="collapse-divider"></div>
                 <h6 class="collapse-header">Other Pages:</h6>

@@ -5,24 +5,16 @@
 
 {% block icerik %}
 
+{% extends "core/mesaj.html" %}
+
+
+
 <div class="container">
-  <h2>Anasayfa</h2>
   <div class="row">
+    <h2>Anasayfa</h2>
 
-    {% for haber in haberler %}
-      <div class="col-md-3 m-3">
+    
 
-        <div class="card" style="width: 18rem;">
-          <img src=" {{ haber.gorsel.url }} " class="card-img-top" alt="1">
-          <div class="card-body">
-            <h5 class="card-title"> {{ haber.baslik }} </h5>
-            <p class="card-text"> {{ haber.icerik }} </p>
-            <a href=" {{ haber.id }} " class="btn btn-primary">Detay Gör</a>
-          </div>
-        </div>
-
-      </div>
-    {% endfor %}
   </div>
 </div>
 

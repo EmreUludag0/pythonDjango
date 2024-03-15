@@ -1,11 +1,11 @@
 from django.contrib import admin
-from .models import *
+
 # Register your models here.
+from .models import *
 
 class UyelerAdmin(admin.ModelAdmin):
-    list_display = [
+    list_display=[
         "user"
     ]
-
 
 admin.site.register(Uyeler, UyelerAdmin)
