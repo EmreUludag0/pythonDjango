@@ -1,9 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 #kullanıcı oturumu işlemleri için gerekli modülleri dahil ettik
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib import messages
 from .models import Uyeler
+
 
 # Create your views here.
 def login(request):
@@ -33,7 +34,28 @@ def register(request):
             messages.info(request, "parola eşleşmiyor")
         # kullanici kontrolunu eposta adresi uzerinden bakıyoruz
         # epostası bulunan kisi yoksa olustur varsa getir 
-        user , created = User.object.get_or_create(username = eposta, password = parola)
+        user , created = User.object.get_or_create(username = eposta)
         if not created:
-            userLogin = authenticate(request, username= eposta) 
+            userLogin = authenticate(request, username= eposta, password = parola)
+            if userLogin is not None:
+                messages.success(request, "daha önceden kaydiniz bulunmaktadir")
+                login(request, userLogin) # login olmuş bir şekilde anasayfaya gönderdik
+                return redirect("anasayfa") 
+            messages.info(request, f"{eposta} kişisi önceden kayit olmus oturum aç ekranina gönderiliyor")
+            return redirect("user_profile:login")
+        
+        user.email = eposta
+        user.first_name = adi
+        user.last_name = soyadi
+        user.set_passworn(parola)
+
+        #bilgileri kaybettik
+        profile, profileCreated = Uyeler.objects.get_or_create(user = user)
+        user.save()
+        profile.save()
+
+        messages.info(request, "kişi kaydedilmiştir.")
+        userLogin = authenticate(request, email = eposta, password = parola)
+        return redirect("anasayfa")
+
     return render(request, "user_profile/register.html", sozluk)
