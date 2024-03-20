@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from .models import *
 
+def kurslar(request):
+    pass
+
+
 # Create your views here.
 def anasayfa(request):
     haberler = Haberler.objects.all()

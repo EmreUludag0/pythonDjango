@@ -1,5 +1,32 @@
 from django.db import models
 
+class Kurslar(models.Model):
+    pass
+
+class Alanlar(models.Model):
+    pass
+
+class Programlar(models.Model):
+    pass
+
+class Programlar(models.Model):
+    turu =  [
+        ("1", "yuzyuze Egitim"),
+        ("2", "Uzaktan egitim"),
+        ("3", "harmanlanmiş egitim"),
+    ]
+    sertifika = [
+        ("1", "sertifika"), 
+        ("2", "katilim belgesi"),
+        ("3", "meb onayli sertifika")
+    ]
+
+    isim = models.CharField(verbose_name = "Program Adi: ", max_length = 100)
+    amaci = models.TextField(verbose_name = "Programın amaci: ")
+    egitimTuru = models.CharField(verbose_name  = "egitim Turu", choices = turu, max_length = 50)
+    sertifikadurumu = models.CharField(choices = sertifika, verbose_name= "sertifika turu", max_length = 50)
+
+
 class Yazar(models.Model):
     adiSoyadi = models.CharField(verbose_name="Yazar Adı:", max_length=50)
     eposta = models.EmailField(verbose_name="E-Posta Adresi:", max_length=254)

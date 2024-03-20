@@ -1,0 +1,28 @@
+
+{% extends "core/base.html" %}
+
+{% block icerik %}
+
+
+
+<!-- .container>.row>.col-md-3{icerik} -->
+<div class="container">
+    <div class="row">
+      <h2>{{ baslik }}</h2>
+
+
+
+  </div>
+</div>
+
+<!-- .container>.row>.col-md-3{icerik} -->
+<div class="container">
+  <div class="row">
+
+    <h2> {{ baslik }} Sayfası </h2>
+    <h4> {{ egitimid.icerik }} </h4>
+    <h5> {{ egitimid.id }} </h5>
+  </div>
+</div>
+
+{% endblock icerik %}
