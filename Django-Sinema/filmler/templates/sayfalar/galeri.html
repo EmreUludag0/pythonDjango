@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block icerik %}
+
+<h2>Galeri Sayfası</h2>
+
+<img src="{{ fotolar.image.url }}"/>
+
+<div class="container">
+    <div class="row">
+        {% for foto in fotolar %}
+            <div class="col-md-3">
+                <h4>{{ foto.baslik }}</h4>
+                <img class="w-100 img-thumbnail" src="{{ foto.image.url }}" alt="1">
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock icerik %}

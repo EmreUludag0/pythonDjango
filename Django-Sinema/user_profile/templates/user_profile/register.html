@@ -1,0 +1,54 @@
+{% extends 'core/baseLogin.html' %}   
+
+{% block icerik %}
+
+{% include "core/mesaj.html" %}
+
+<div class="container-fluid bg-dark">
+    <div class="container-sm">
+        <div class="row">
+            <h4 class="display-5 text-warning">Üyemiz Olun</h4>
+            <form method="post" class="text-info">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="adi" class="form-label">Adınız</label>
+                    <input type="text" class="form-control" 
+                    id="adi" name="adi" />
+                </div>
+                <div class="mb-3">
+                    <label for="soyadi" class="form-label">Soyadınız</label>
+                    <input type="text" class="form-control" 
+                    id="soyadi" name="soyadi" />
+                </div>
+                <div class="mb-3">
+                    <label for="eposta" class="form-label">E-Posta Adresi</label>
+                    <input type="email" class="form-control" 
+                    id="eposta" name="eposta" />
+                </div>
+                <div class="mb-3">
+                    <label for="eposta_confirm" class="form-label">E-Posta Tekrar</label>
+                    <input type="email" class="form-control" 
+                    id="eposta_confirm" name="eposta_confirm" />
+                </div>
+                <div class="mb-3">
+                    <label for="parola" class="form-label">Parola</label>
+                    <input type="password" class="form-control" 
+                    id="parola" name="parola" />
+                </div>
+                <div class="mb-3">
+                    <label for="parola_confirm" class="form-label">Parola Tekrar</label>
+                    <input type="password" class="form-control" 
+                    id="parola_confirm" name="parola_confirm" />
+                </div>
+
+                <button type="submit" class="btn btn-primary" href="#">Üyemiz Olun</button>
+                <a class="btn btn-secondary" href="{% url 'anasayfa' %}">İptal</a>
+                <a class="btn btn-info" href="{% url 'user_profile:loginView' %}">Üye Giriş</a>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% endblock icerik %}

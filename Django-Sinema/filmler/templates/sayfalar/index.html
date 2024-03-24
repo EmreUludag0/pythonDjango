@@ -1,0 +1,29 @@
+
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block icerik %}
+
+{% include "core/mesaj.html" %}
+
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        {% for foto in fotolar %}
+            <div class="swiper-slide">
+                <h3>{{ foto.baslik }}</h3>
+                <img class="w-75 border border-3 mx-auto" src="{{ foto.image.url }}" title="{{ foto.baslik }}" alt="0">
+            </div>
+        {% endfor %}
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+
+<div class="container">
+    for ile kart yapısı dönsun
+</div>
+
+
+{% endblock icerik %}
