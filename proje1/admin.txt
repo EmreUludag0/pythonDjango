@@ -1,2 +1,0 @@
-K.A = emre123
-Sifre = emre123
